@@ -1,0 +1,5 @@
+from tkinter import *  #imported tkinter
+Krishnasw = Tk() #Krishna's window created
+Srinivas = Label(text= "Dhar Mann", font= ("ds-digital", 80), background= "White", foreground= "Red") #label called srinivas created
+Srinivas.pack() #put srinivas into krishna's window
+Krishnasw.mainloop() #closes the programming loop

@@ -1,0 +1,7 @@
+# Program 1: Write a program to find the square root of any given number"
+
+
+import math
+
+number = int(input("Enter any given number: "))
+print("Square root of ", number," is:", math.sqrt(number) )

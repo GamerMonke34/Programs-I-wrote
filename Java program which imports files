@@ -1,0 +1,12 @@
+// this is a program to write a pop up meme//
+
+import javax.swing.*;
+
+public class Krishnasmeme{
+   public static void main(String[] args){
+   
+   ImageIcon Morbius = new ImageIcon("Morbius.jpg");
+    JOptionPane.showMessageDialog(null, "what time is it? Its Morbin Time","Morbius",0, Morbius);
+    
+   }//end main
+}//end program

@@ -1,0 +1,70 @@
+//Krishna Srinivas
+//10/4/2022
+//Purpose
+
+import javax.swing.*;
+
+public class Main {
+  public static void main(String[] args) {
+    // set up variables!
+    String noun1, noun2, verb, adverb1, adject1, noun3, adject2, adverb2;
+
+    // get info
+    noun1 = JOptionPane.showInputDialog(null,
+        "A noun is a name, person, place, animal or thing.\nEnter a noun, Ex: Weezer, Morbius",
+        "NOUN",
+        -1
+
+    );
+
+
+    verb = JOptionPane.showInputDialog(null,
+        "Verbs are words show an action, occurence or state of being. \nPlease enter a verb", "Ex: Morbin,");
+
+
+    
+
+    noun2 = JOptionPane.showInputDialog(null,
+        "A noun is a name, person, place, animal or thing.\nEnter a noun, Ex: Weezer, Dhar Mann",
+        "NOUN",
+        -1);
+
+
+    adject1 = JOptionPane.showInputDialog(null,
+          "An adjective is a describing word, a word that describes something or someone. \nPlease enter an adjective", "Ex: furry, cringe");
+    
+
+
+    noun3 = JOptionPane.showInputDialog(null,
+        "A noun is A noun is a name, person, place, animal or thing.\nEnter a noun, Ex: Jojo, Joseph Stalin");
+
+    
+
+
+    adverb1 = JOptionPane.showInputDialog(null,
+          "An adverb is a word that describes how an action is carried out. \nPlease enter an adverb", "Ex: Morbiusly,");
+
+
+
+    
+    adverb2 = JOptionPane.showInputDialog(null,
+          "An adverb is a word that describes how an action is carried out. \nPlease enter an adverb", "Ex: Weezerly");
+
+
+    
+
+
+    adject2 = JOptionPane.showInputDialog(null,
+          "An adjective is a describing word, a word that describes something or someone. \nPlease enter an adjective", "Ex: nerdy, drippy");
+
+
+    
+
+
+    //tell the story
+    JOptionPane.showMessageDialog(null, "Once upon a time there was a " + noun1 + " who loved to "+verb + " in the " + noun2 + ".\none day they came across a " + adject1 + " Morbius.\nafter seeing it, they ran in the other direction to "    + noun3 + "once they saw them, they " + adverb2 + " morbed ");
+    
+
+    
+  }
+}

@@ -1,0 +1,123 @@
+/*
+Krishna Srinivas
+This program has 2 functions and a main function
+// All of the function require the user to enter
+// numeric values, then convert that String to 
+// a number and use it in a meaningful way.
+
+//This program will be turned in as a final project!
+copy and paste this code into jGrasp (or your own repl.it account) and use it as your starter kit
+*/
+import javax.swing.*; //so I can use dialog boxes
+public class moviePaycheck{
+
+
+//a function is 'declared' using a heading like this:
+// public static void <name of function>()
+
+//***********START PAYCHECK FUNCTION*************************
+//This function will ask the user for the their hourly wage and
+// number of hours they worked, and calculate then print their total
+public static void paycheck(){
+   //define variables 
+   String input;  //to get input from the user
+   double hourlyWage=0, numHours=0, takeHome, deduct, beforeTaxes;
+   final double TAX = .1;
+   //get the hours they worked (remember the try...catch)
+   input = JOptionPane.showInputDialog("Enter the hours you worked");
+   try{
+         numHours = Double.parseDouble(input);
+   } 
+   catch(Exception e){
+   JOptionPane.showMessageDialog(null, "oops. "+input+ " is not valid. I will use 0");
+   }
+    input = JOptionPane.showInputDialog("How much do you make per hour");
+    try{
+      hourlyWage = Double.parseDouble(input);
+    }
+        catch(Exception e){
+   JOptionPane.showMessageDialog(null, "oops. "+input+ " is not valid. I will use 0");
+   }
+  
+   //calcluate total amount due, the amount that will be deducted and the amount of their paycheck
+   beforeTaxes = numHours*hourlyWage;
+   deduct = beforeTaxes*TAX;
+   takeHome = beforeTaxes - deduct;
+   
+   
+   //print result Use String.format("$%8.2f",variable) to format the money
+   JOptionPane.showMessageDialog(null,
+      "Before Taxes                  " + String.format("$%8.2f",beforeTaxes) + 
+      "\nTax Deduction               "+ String.format("$%8.2f",deduct) + 
+      "\nTake Home Pay               "+ String.format("$%8.2f",takeHome) );
+}
+//**************END PAYCHECK FUNCTION********************
+
+
+//*********START MOVIE FUNCTION*************************
+//This function will ask the user for the number of adults and children
+// going to the movie and calculate the total due $9.15 per adult and
+// $6.45 per child
+public static void movie(){
+   //define variables
+   String input;
+   int numAdults = -1, numChild = -1;
+   double totalAdult, totalChild, totalDue;
+   final double COSTADULT = 9.15, COSTCHILD = 6.45;
+
+   //get information
+   input = JOptionPane.showInputDialog("How many Adults?");
+   try{
+      numAdults = Integer.parseInt(input);
+   }catch(Exception e){
+   
+   }
+   
+   
+   input = JOptionPane.showInputDialog("How many Children?");
+   try{
+      numChild = Integer.parseInt(input);
+   }catch(Exception e){
+   
+   }
+   
+   
+   //calcluate total cost amount
+   totalAdult = numAdults*COSTADULT;
+   totalChild = numChild*COSTCHILD;
+   totalDue = totalAdult + totalChild;
+     
+   //print result
+   JOptionPane.showMessageDialog(null, numAdults + "adults: " + String.format("$%.2f", totalAdult) + "\n" + numChild + " numChild: " + String.format("$%.2f",totalChild) + "\nTotal cost: " + String.format("$%.2f",totalDue), "Receipt", -1, null);
+}
+//end movie function!!
+//***********END MOVIE FUNCTION********************
+
+// This is the main method of the program, it is the 
+// very first thing the computer looks at
+
+public static void main(String[] args) {
+   // call on the functions here
+   //paycheck();
+   movie();
+}
+}
+//end main
+
+
+
+//end of program  
+
+/*
+TODO
+1. locate all of the functions in this program - what are their names?
+
+2. Write the paycheck function and run your program several times while you are writing this. type a few lines of code, stop and test - until you have finished the paycheck function
+
+3. test the paycheck function
+
+4. Write the movie theater function
+
+5. test the movie theater function
+
+*/
